@@ -26,23 +26,23 @@ The pre-trained models and the collected sensor data is brought together and the
 
 ## Hardware Requirement
 
-150 RPM dual shaft geared motor
-5000 mAh lithium polymer power bank
-5V 0.2A Cooling Fan
-Raspberry Pi 4 b
-Raspberry pi 4 heatsink
-Battery holder case 4x 1.5V AA
-IR Proximity Sensor
-NiMH 3000mAh battery
-Raspberry pi 5MP camera
-L293D Motor Shield
-16GB MicroSDHC
-Arduino Uno
-Wheels 2.5’’
-Laptop 
-BreadBoard
-Jumper Cables(m-m,f-m,f-f) 
-USB A to USB B cable
+150 RPM dual shaft geared motor,
+5000 mAh lithium polymer power bank,
+5V 0.2A Cooling Fan,
+Raspberry Pi 4 b,
+Raspberry pi 4 heatsink,
+Battery holder case 4x 1.5V AA,
+IR Proximity Sensor,
+NiMH 3000mAh battery,
+Raspberry pi 5MP camera,
+L293D Motor Shield,
+16GB MicroSDHC,
+Arduino Uno,
+Wheels 2.5’’,
+Laptop ,
+BreadBoard,
+Jumper Cables(m-m,f-m,f-f) ,
+USB A to USB B cable,
 LED
 
 
