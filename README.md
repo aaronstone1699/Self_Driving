@@ -10,18 +10,18 @@ For the final training we have used a custom dataset created on a specifically c
 ## Proposed Method
 Our method works by a cooperative operation between an arduino which acts as a drive unit and a raspberry pi which acts as the brain.The arduino is connected to an h-bridge which controls 2 geared dc motors and 1 servo motor, the arduino is further connected to 3 ir sensors which measure the distance between the objects on 3 sides.The arduino sends data to the raspberry pi through usb bus and receives serial instruction from the pi after he raw dat has been processed and a prediction has been made.
 
-## Pre Training Phase
+### Pre Training Phase
 For the training of our final model we need the images to be available in a processed form instead of in the raw form.For this step/ we first semantically segment the images into various objects (from 1 of 128) so the images from any scenario could be generalised.Then from the segmented images the traffic sign segment is extracted and sent to a classifier for the classification between various types of traffic signs.
 
-## Data Collection Phase
-### Camera data: 
+### Data Collection Phase
+#### Camera data: 
 the camera mounted on top of the car provides a constant feed of 256*256*3 images of the path which is passed to the image segmentation with weights taken from the previous stage and the traffic sign classification model ,this step results in a processed segmented image and the label array with direction.
-### Arduino sensor data : 
+#### Arduino sensor data : 
 the arduino is connected to 3 ir proximity sensors which are mounted on the back,right and left sides of the vehicle and relay the 0/1 information of whether the vehicle is in close proximity with another object.
 
 These sensor and camera datas are processed using the pretrained models (UNet for segmentation and CNN for traffic light classification).This information is arranged in a [length,5] numpy array ,where each element contains [ir_sensor_right,ir_sensor_left,ir_sensor_back,traffic_light,image(segmented)],this data is appended with the direction logged from the user which is one from {f,b,l,r,s}.
 
-## Final Training Phase
+### Final Training Phase
 The pre-trained models and the collected sensor data is brought together and the vehicle is driven manually across 2 tracks for the training of the deep learning model which can be used to predict the moves in a testing scenario. 
 
 ## Hardware Requirement
